@@ -19,6 +19,11 @@ class Adam(Human):
             return "rib"   # symbolizes the rib that will be used to create Eve
         else:
             print(f"{self.name} has no ribs left to remove.")
+            
+    def set_peace(self):
+        print("Peace has been set between humans and nature.")
+        self.peace = True
+        
 
 class Eve(Human):
     def __init__(self):
@@ -27,7 +32,23 @@ class Eve(Human):
 
     def origin(self):
         print(f"From {self.created_from}'s rib I was made.")
+        
+class ForbiddenFruit:
+    def __init__(self):
+        self.name = "Forbidden Fruit"
+
+    def eat(self):
+        print("You have eaten the Forbidden Fruit. You are now aware of good and evil.")
+
+class Peace:
+    def __init__(self):
+        self.name = "Peace"
+
+    def achieve(self):
+        print("Peace has been achieved.")
+        
 
 person = Adam()
 print(person)  # Outputs: 24
 person.speak()      # Outputs: Hello, my name is Adam
+
